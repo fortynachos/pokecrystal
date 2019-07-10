@@ -98,81 +98,100 @@
 
 ; Actual characters (from gfx/font/font.png)
 
-	charmap "A",         $80
-	charmap "B",         $81
-	charmap "C",         $82
-	charmap "D",         $83
-	charmap "E",         $84
-	charmap "F",         $85
-	charmap "G",         $86
-	charmap "H",         $87
-	charmap "I",         $88
-	charmap "J",         $89
-	charmap "K",         $8a
-	charmap "L",         $8b
-	charmap "M",         $8c
-	charmap "N",         $8d
-	charmap "O",         $8e
-	charmap "P",         $8f
-	charmap "Q",         $90
-	charmap "R",         $91
-	charmap "S",         $92
-	charmap "T",         $93
-	charmap "U",         $94
-	charmap "V",         $95
-	charmap "W",         $96
-	charmap "X",         $97
-	charmap "Y",         $98
-	charmap "Z",         $99
+	charmap "A",         $80	; Ꭰ
+	charmap "B",         $81	; Ꭱ
+	charmap "C",         $82	; Ꭲ
+	charmap "D",         $83	; Ꭳ
+	charmap "E",         $84	; Ꭴ
+	charmap "F",         $85	; Ꭵ
+	charmap "G",         $86	; Ꭶ
+	charmap "H",         $87	; Ꭷ
+	charmap "I",         $88	; Ꭸ
+	charmap "J",         $89	; Ꭹ
+	charmap "K",         $8a	; Ꭺ
+	charmap "L",         $8b	; Ꭻ
+	charmap "M",         $8c	; Ꭼ
+	charmap "N",         $8d	; Ꭽ
+	charmap "O",         $8e	; Ꭾ
+	charmap "P",         $8f	; Ꭿ
+	charmap "Q",         $90	; Ꮀ
+	charmap "R",         $91	; Ꮁ
+	charmap "S",         $92	; Ꮂ
+	charmap "T",         $93	; Ꮃ
+	charmap "U",         $94	; Ꮄ
+	charmap "V",         $95	; Ꮅ
+	charmap "W",         $96	; Ꮆ
+	charmap "X",         $97	; Ꮇ
+	charmap "Y",         $98	; Ꮈ
+	charmap "Z",         $99	; Ꮉ
+	charmap "(",         $9a	; Ꮊ
+	charmap ")",         $9b	; Ꮋ
+	charmap ":",         $9c	; Ꮌ
+	charmap ";",         $9d	; Ꮍ
+	charmap "[",         $9e	; Ꮎ
+	charmap "]",         $9f	; Ꮏ
+	charmap "a",         $a0	; Ꮐ
+	charmap "b",         $a1	; Ꮑ
+	charmap "c",         $a2	; Ꮒ
+	charmap "d",         $a3	; Ꮓ
+	charmap "e",         $a4	; Ꮔ
+	charmap "f",         $a5	; Ꮕ
+	charmap "g",         $a6	; Ꮖ
+	charmap "h",         $a7	; Ꮗ
+	charmap "i",         $a8	; Ꮘ
+	charmap "j",         $a9	; Ꮙ
+	charmap "k",         $aa 	; Ꮚ
+	charmap "l",         $ab 	; Ꮛ
+	charmap "m",         $ac 	; Ꮜ
+	charmap "n",         $ad 	; Ꮝ
+	charmap "o",         $ae 	; Ꮞ
+	charmap "p",         $af 	; Ꮟ	
+	charmap "q",         $b0	; Ꮠ
+	charmap "r",         $b1	; Ꮡ
+	charmap "s",         $b2	; Ꮢ
+	charmap "t",         $b3	; Ꮣ
+	charmap "u",         $b4	; Ꮤ	
+	charmap "v",         $b5	; Ꮥ
+	charmap "w",         $b6	; Ꮦ	
+	charmap "x",         $b7	; Ꮧ
+	charmap "y",         $b8	; Ꮨ
+	charmap "z",         $b9	; Ꮩ
+	charmap "Ä",         $ba 	; Ꮪ
+	charmap "Ö",         $bb 	; Ꮫ
+	charmap "Ü",         $bc 	; Ꮬ
+	charmap "ä",         $bd 	; Ꮭ
+	charmap "ö",         $be 	; Ꮮ	
+	charmap "ü",         $bf 	; Ꮯ
 
-	charmap "(",         $9a
-	charmap ")",         $9b
-	charmap ":",         $9c
-	charmap ";",         $9d
-	charmap "[",         $9e
-	charmap "]",         $9f
+;	charmap "Ä",         $c0
+;	charmap "Ö",         $c1
+;	charmap "Ü",         $c2
+;	charmap "ä",         $c3
+;	charmap "ö",         $c4
+;	charmap "ü",         $c5
 
-	charmap "a",         $a0
-	charmap "b",         $a1
-	charmap "c",         $a2
-	charmap "d",         $a3
-	charmap "e",         $a4
-	charmap "f",         $a5
-	charmap "g",         $a6
-	charmap "h",         $a7
-	charmap "i",         $a8
-	charmap "j",         $a9
-	charmap "k",         $aa
-	charmap "l",         $ab
-	charmap "m",         $ac
-	charmap "n",         $ad
-	charmap "o",         $ae
-	charmap "p",         $af
-	charmap "q",         $b0
-	charmap "r",         $b1
-	charmap "s",         $b2
-	charmap "t",         $b3
-	charmap "u",         $b4
-	charmap "v",         $b5
-	charmap "w",         $b6
-	charmap "x",         $b7
-	charmap "y",         $b8
-	charmap "z",         $b9
-
-	charmap "Ä",         $c0
-	charmap "Ö",         $c1
-	charmap "Ü",         $c2
-	charmap "ä",         $c3
-	charmap "ö",         $c4
-	charmap "ü",         $c5
-
-	charmap "'d",        $d0
-	charmap "'l",        $d1
-	charmap "'m",        $d2
-	charmap "'r",        $d3
-	charmap "'s",        $d4
-	charmap "'t",        $d5
-	charmap "'v",        $d6
+	charmap "Ꮰ",         $c0
+	charmap "Ꮱ",         $c1
+	charmap "Ꮲ",         $c2
+	charmap "Ꮳ",         $c3
+	charmap "Ꮴ",         $c4
+	charmap "Ꮵ",         $c5
+	charmap "Ꮶ",         $c6
+	charmap "Ꮷ",         $c7
+	charmap "Ꮸ",         $c8
+	charmap "Ꮹ",		 $c9
+	charmap "Ꮺ",		 $ca
+	charmap "Ꮻ",		 $cb
+	charmap "Ꮼ",		 $cc
+	charmap "Ꮽ",		 $cd	
+	
+	charmap "'d",        $ce	; Ꮾ
+	charmap "'l",        $d0	; Ꮿ
+	charmap "'m",        $d1	; Ᏸ
+	charmap "'r",        $d2	; Ᏹ
+	charmap "'s",        $d3	; Ᏺ
+	charmap "'t",        $d4	; Ᏻ
+	charmap "'v",        $d5	; Ᏼ
 
 	charmap "←",         $df
 	charmap "'",         $e0

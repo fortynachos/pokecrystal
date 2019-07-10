@@ -294,7 +294,8 @@ NamingScreen_ApplyTextInputMode:
 	lb bc, 1, 18
 	call ClearBox
 	pop de
-	hlcoord 2, 8
+	; **POSITION OF TEXTBOX START** 
+	hlcoord 2, 9
 	ld b, $5
 	call NamingScreen_IsTargetBox
 	jr nz, .row
@@ -310,7 +311,8 @@ NamingScreen_ApplyTextInputMode:
 	dec c
 	jr nz, .col
 	push de
-	ld de, 2 * SCREEN_WIDTH - $11
+	; **LINE HEIGHT FOR JUMPTABLE**
+	ld de, 1 * SCREEN_WIDTH - $11
 	add hl, de
 	pop de
 	dec b
