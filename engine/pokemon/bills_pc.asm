@@ -2418,8 +2418,8 @@ BillsPC_ChangeBoxSubmenu:
 	cp $1
 	jr z, .Switch
 	cp $2
-	jr z, .Name
-	cp $3
+	;jr z, .Name
+	;cp $3
 	jr z, .Print
 	and a
 	ret
@@ -2485,9 +2485,9 @@ BillsPC_ChangeBoxSubmenu:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 3 ; items
 	db "SWITCH@"
-	db "NAME@"
+	;db "NAME@"
 	db "PRINT@"
 	db "QUIT@"
 
