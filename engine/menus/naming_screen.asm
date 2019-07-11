@@ -128,7 +128,8 @@ NamingScreen:
 	ret
 
 .PlayerNameString:
-	db "YOUR NAME?@"
+	;db "YOUR NAME?@"
+	db "@"
 
 .Rival:
 	ld de, SilverSpriteGFX
@@ -218,7 +219,7 @@ NamingScreen:
 	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
 .not_kris
 	ld a, b
-	depixel 4, 4, 4, 0
+	depixel 4, 6, 6, 0
 	call _InitSpriteAnimStruct
 	ret
 
@@ -229,12 +230,13 @@ NamingScreen:
 
 .StoreSpriteIconParams:
 	ld a, PLAYER_NAME_LENGTH - 1
-	hlcoord 5, 6
+	;**Moves the blinky name line**
+	hlcoord 7, 3
 	jr .StoreParams
 
 .StoreBoxIconParams:
 	ld a, BOX_NAME_LENGTH - 1
-	hlcoord 5, 4
+	hlcoord 5, 3
 	jr .StoreParams
 
 .StoreParams:
@@ -263,7 +265,7 @@ NamingScreen_InitText:
 	ld a, NAMINGSCREEN_BORDER
 	call ByteFill
 	hlcoord 1, 1
-	lb bc, 6, 18
+	lb bc, 12, 18
 	call NamingScreen_IsTargetBox
 	jr nz, .not_box
 	lb bc, 4, 18
@@ -294,8 +296,8 @@ NamingScreen_ApplyTextInputMode:
 	lb bc, 1, 18
 	call ClearBox
 	pop de
-	; **POSITION OF TEXTBOX START** 
-	hlcoord 2, 9
+	; **POSITION OF JUMPTEXT START** 
+	hlcoord 2, 6
 	ld b, $5
 	call NamingScreen_IsTargetBox
 	jr nz, .row
@@ -312,7 +314,7 @@ NamingScreen_ApplyTextInputMode:
 	jr nz, .col
 	push de
 	; **LINE HEIGHT FOR JUMPTABLE**
-	ld de, 1 * SCREEN_WIDTH - $11
+	ld de, 2 * SCREEN_WIDTH - $11
 	add hl, de
 	pop de
 	dec b
@@ -381,7 +383,8 @@ NamingScreenJoypadLoop:
 	dw .ReadButtons
 
 .InitCursor:
-	depixel 10, 3
+	; **CURSOR COORDINATE PLACEMENT ***
+	depixel 8, 3
 	call NamingScreen_IsTargetBox
 	jr nz, .got_cursor_position
 	ld d, 8 * 8
@@ -519,6 +522,7 @@ NamingScreen_AnimateCursor:
 	ld a, [hl]
 	ld e, a
 	swap e
+	;** This does something with the cursor y movement**
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], e
