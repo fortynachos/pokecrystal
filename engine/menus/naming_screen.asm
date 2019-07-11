@@ -115,8 +115,10 @@ NamingScreen:
 	ret
 
 .NicknameStrings:
-	db "'S@"
-	db "NICKNAME?@"
+	db "@"
+	db "@"
+	;db "'S@"
+	;db "NICKNAME?@"
 
 .Player:
 	farcall GetPlayerIcon
@@ -142,7 +144,8 @@ NamingScreen:
 	ret
 
 .RivalNameString:
-	db "RIVAL'S NAME?@"
+	;db "RIVAL'S NAME?@"
+	db "@"
 
 .Mom:
 	ld de, MomSpriteGFX
@@ -179,7 +182,8 @@ NamingScreen:
 	ret
 
 .BoxNameString:
-	db "BOX NAME?@"
+	;db "BOX NAME?@"
+	db "@"
 
 .Tomodachi:
 	hlcoord 3, 2
@@ -225,7 +229,7 @@ NamingScreen:
 
 .StoreMonIconParams:
 	ld a, MON_NAME_LENGTH - 1
-	hlcoord 5, 6
+	hlcoord 5, 4
 	jr .StoreParams
 
 .StoreSpriteIconParams:
@@ -298,7 +302,7 @@ NamingScreen_ApplyTextInputMode:
 	pop de
 	; **POSITION OF JUMPTEXT START** 
 	hlcoord 2, 6
-	ld b, $5
+	ld b, $6
 	call NamingScreen_IsTargetBox
 	jr nz, .row
 	hlcoord 2, 6
@@ -485,7 +489,7 @@ NamingScreen_GetCursorPosition:
 	add hl, bc
 	ld a, [hl]
 	push bc
-	ld b, $4
+	ld b, $5
 	call NamingScreen_IsTargetBox
 	jr nz, .not_box
 	inc b
@@ -526,7 +530,7 @@ NamingScreen_AnimateCursor:
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], e
-	ld d, $4
+	ld d, $5
 	call NamingScreen_IsTargetBox
 	jr nz, .ok
 	inc d
@@ -625,7 +629,7 @@ NamingScreen_AnimateCursor:
 .asm_11ad8
 	cp $1
 	jr nz, .asm_11ade
-	ld a, $4
+	ld a, $5
 .asm_11ade
 	dec a
 	dec a
@@ -649,7 +653,7 @@ NamingScreen_AnimateCursor:
 	ret
 
 .asm_11af9
-	cp $4
+	cp $5
 	jr nc, .asm_11aff
 	inc [hl]
 	ret
@@ -668,7 +672,7 @@ NamingScreen_AnimateCursor:
 	ret
 
 .asm_11b0c
-	ld [hl], $4
+	ld [hl], $5
 	call NamingScreen_IsTargetBox
 	ret nz
 	inc [hl]
@@ -1280,7 +1284,7 @@ ComposeMail_AnimateCursor:
 .caps_del_done_left
 	cp $1
 	jr nz, .wrap_around_command_left
-	ld a, $4
+	ld a, $5
 .wrap_around_command_left
 	dec a
 	dec a
