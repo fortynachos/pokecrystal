@@ -20,7 +20,7 @@ NameInputUpper:
 	db "A B C D E F G H I"
 	db "J K L M N O P Q R"
 	db "S T U V W X Y Z ("
-	db ") : ; [ ] a b c d"
+	db ") é ; [ ] a b c d"
 	db "e f g h i j k l m"
 	db "lower  DEL   END "
 
@@ -28,6 +28,6 @@ BoxNameInputUpper:
 	db "A B C D E F G H I"
 	db "J K L M N O P Q R"
 	db "S T U V W X Y Z ("
-	db ") : ; [ ] a b c d"
+	db ") é ; [ ] a b c d"
 	db "e f g h i j k l m"
 	db "lower  DEL   END "
